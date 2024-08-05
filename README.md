@@ -2,27 +2,33 @@
 
 ## Overview
 
-This is your new Kedro project with Kedro-Viz and PySpark setup, which was generated using `kedro 0.19.6`.
-
-Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
+This is a Kedro project with Kedro-Viz and PySpark setup, which was generated using `kedro 0.19.6`.
 
 ## Rules and guidelines
 
 In order to get the best out of the template:
 
-* Don't remove any lines from the `.gitignore` file we provide
+* Don't remove any lines from the `.gitignore` file
 * Make sure your results can be reproduced by following a [data engineering convention](https://docs.kedro.org/en/stable/faq/faq.html#what-is-data-engineering-convention)
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
 
 ## How to install dependencies
 
-Declare any dependencies in `requirements.txt` for `pip` installation.
+The dependencias are declared in `requirements.txt` for `pip` installation.
 
 To install them, run:
 
 ```
 pip install -r requirements.txt
+```
+
+## How to add pipelines to the project
+
+To create a new pipeline inside the project, run the following command:
+
+```
+kedro pipeline create <pipeline_name>
 ```
 
 ## How to run your Kedro pipeline
@@ -33,21 +39,21 @@ You can run your Kedro project with:
 kedro run
 ```
 
+You can run the pipeline from a specific node with:
+
+```
+kedro run --from-nodes=process_data_idft2_node
+```
+
 ## How to test your Kedro project
 
-Have a look at the files `src/tests/test_run.py` and `src/tests/pipelines/data_science/test_pipeline.py` for instructions on how to write your tests. Run the tests as follows:
+Have a look at the file `tests/test_run.py` for instructions on how to write your tests. Run the tests as follows:
 
 ```
 pytest
 ```
 
 To configure the coverage threshold, look at the `.coveragerc` file.
-
-## Project dependencies
-
-To see and update the dependency requirements for your project use `requirements.txt`. Install the project requirements with `pip install -r requirements.txt`.
-
-[Further information about project dependencies](https://docs.kedro.org/en/stable/kedro_project_setup/dependencies.html#project-specific-dependencies)
 
 ## How to work with Kedro and notebooks
 
@@ -96,3 +102,10 @@ To automatically strip out all output cell contents before committing to `git`, 
 ## Package your Kedro project
 
 [Further information about building project documentation and packaging your project](https://docs.kedro.org/en/stable/tutorial/package_a_project.html)
+
+## Resources
+
+- Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
+- Check the [code formatting and linting](https://docs.kedro.org/en/stable/development/linting.html) page to run the tools.
+- This project uses custom datasets. Check the [Tutorial to create a custom dataset](https://docs.kedro.org/en/stable/data/how_to_create_a_custom_dataset.html).
+- [Further information about project dependencies](https://docs.kedro.org/en/stable/kedro_project_setup/dependencies.html#project-specific-dependencies)
