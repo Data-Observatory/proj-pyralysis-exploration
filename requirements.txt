@@ -1,0 +1,15 @@
+ipython>=8.10
+jupyterlab>=3.0
+kedro~=0.19.6
+kedro-datasets>=3.0; python_version >= "3.9"
+kedro-telemetry>=0.3.1
+kedro-viz>=6.7.0
+notebook
+pyspark==3.5.1
+pytest~=7.2
+pytest-cov~=3.0
+pytest-mock>=1.7.1, <2.0
+ruff~=0.1.8
+setuptools; python_version >= "3.9"
+git+https://gitlab.com/clirai/pyralysis.git@1fe6af7b5a7e6bb49f07b7660513b6159f230242
+cupy-cuda12x==13.2.0

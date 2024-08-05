@@ -1,0 +1,19 @@
+alma:
+  type: idft.datasets.pyralysis_dataset.PyralysisDataset
+  filepath: data/01_raw/co65/co65.ms
+
+alma_model_visibilities:
+  type: idft.datasets.pyralysis_dataset.PyralysisZarrDataset
+  filepath: data/02_intermediate/co65.zarr
+
+alma_image:
+  type: idft.datasets.pyralysis_dataset.PyralysisImage
+  filepath: data/02_intermediate/co65_image.fits
+
+idft2_input:
+  type: idft.datasets.arrays_dataset.GroupedArraysDataset
+  filepath: data/02_intermediate/co65_idft2_input.zarr
+
+idft2_input_cp:
+  type: idft.datasets.arrays_dataset.GroupedCupyArraysDataset
+  filepath: data/02_intermediate/co65_idft2_input.zarr
