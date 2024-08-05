@@ -55,6 +55,23 @@ pytest
 
 To configure the coverage threshold, look at the `.coveragerc` file.
 
+## How to contribute to this project
+
+After installing the dependencies, run the pipeline modified, and check that everything is working.
+This project has linting with ruff, and has pre-commit configured to check for code issues.
+
+To install pre-commit run:
+
+```
+pip install pre-commit
+```
+
+To install the git hook scripts run:
+
+```
+pre-commit install
+```
+
 ## How to work with Kedro and notebooks
 
 > Note: Using `kedro jupyter` or `kedro ipython` to run your notebook provides these variables in scope: `catalog`, `context`, `pipelines` and `session`.
